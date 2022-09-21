@@ -1,0 +1,52 @@
+.my-container {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 600px;
+  font-family: "Lato", sans-serif;
+  color: #596275;
+  border: 1px solid #d5d5d8;
+  box-shadow: 1px 1px 10px #d5d5d8;
+}
+
+.search-form {
+  margin-bottom: 20px;
+}
+
+.current-temp {
+  margin-bottom: 20px;
+}
+
+#day {
+  font-size: 20px;
+}
+
+.temp {
+  font-size: 62px;
+  font-weight: 400;
+}
+
+.degrees {
+  font-size: 24px;
+  position: relative;
+  top: -32px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.icon {
+  position: relative;
+  top: -32px;
+  font-size: 40px;
+}
+
+.weather-add,
+.day {
+  margin: 0 0 20px;
+}
+
+.weather-add-info,
+.day-info {
+  list-style: none;
+}
