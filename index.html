@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/466ceacc95.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="my-container">
+      <div class="container">
+        <form class="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                class="form-control city-search"
+                id="city-input"
+                placeholder="Type a city..."
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                class="form-control btn btn-primary"
+                id="search-btn"
+                value="Search"
+              />
+            </div>
+            <div class="col-3">
+              <button class="btn btn-success" id="current-city-btn">
+                Current City
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="heading">
+          <h1 class="current-city" id="city"></h1>
+          <ul class="day">
+            <li class="day-info" id="day"></li>
+            <li class="day-info" id="description"></li>
+          </ul>
+          <h2 class="current-temp">
+            <p>
+              <span class="icon">⛅</span
+              ><span class="temp" id="temperature"></span
+              ><span class="degrees">
+                <a href="#" class="celsius"> ℃ </a> |
+                <a href="#" class="fahrenheit"> ℉ </a></span
+              >
+            </p>
+          </h2>
+          <ul class="weather-add">
+            <li class="weather-add-info">
+              Humidity: <span id="humidity"></span> %
+            </li>
+            <li class="weather-add-info">Wind: <span id="wind"></span> km/h</li>
+          </ul>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <p>
+              Tue
+              <br />
+              09/06
+              <br />
+              ⛅
+              <br />
+              17℃
+              <br />
+              5℃
+            </p>
+          </div>
+          <div class="col">
+            <p>
+              Wed
+              <br />
+              09/07
+              <br />
+              ⛅
+              <br />
+              19℃
+              <br />
+              6℃
+            </p>
+          </div>
+          <div class="col">
+            <p>
+              Thu
+              <br />
+              09/08
+              <br />
+              ⛅
+              <br />
+              22℃
+              <br />
+              11℃
+            </p>
+          </div>
+          <div class="col">
+            <p>
+              Fri
+              <br />
+              09/09
+              <br />
+              🌧️
+              <br />
+              21℃
+              <br />
+              13℃
+            </p>
+          </div>
+          <div class="col">
+            <p>
+              Sat
+              <br />
+              09/10
+              <br />
+              🌧️
+              <br />
+              18℃
+              <br />
+              10℃
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
