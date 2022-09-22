@@ -1,5 +1,5 @@
 .my-container {
-  margin: 50px auto;
+  margin: 50px auto 10px;
   padding: 20px;
   max-width: 600px;
   font-family: "Lato", sans-serif;
@@ -49,4 +49,10 @@ a:link {
 .weather-add-info,
 .day-info {
   list-style: none;
+}
+
+.link {
+  margin: 0 auto;
+  max-width: 590px;
+  font-size: 12px;
 }
