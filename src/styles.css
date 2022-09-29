@@ -56,3 +56,8 @@ a:link {
   max-width: 590px;
   font-size: 12px;
 }
+
+.current-temp .active {
+  color: #596275;
+  cursor: default;
+}
