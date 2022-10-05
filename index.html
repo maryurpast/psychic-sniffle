@@ -27,7 +27,7 @@
   <body>
     <div class="my-container">
       <div class="container">
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <div class="row">
             <div class="col-6">
               <input
@@ -56,25 +56,20 @@
 
         <div class="heading">
           <h1 class="current-city" id="city"></h1>
-          <ul class="day">
-            <li class="day-info" id="day"></li>
-            <li class="day-info" id="description"></li>
+          <ul>
+            <li id="day"></li>
+            <li id="description"></li>
           </ul>
           <h2 class="current-temp">
             <p>
               <span class="icon">⛅</span
               ><span class="temp" id="temperature"></span
-              ><span class="degrees">
-                <a href="#" id="celsius" class="active"> ℃ </a> |
-                <a href="#" id="fahrenheit"> ℉ </a></span
-              >
+              ><span class="units">℃</span>
             </p>
           </h2>
-          <ul class="weather-add">
-            <li class="weather-add-info">
-              Humidity: <span id="humidity"></span> %
-            </li>
-            <li class="weather-add-info">Wind: <span id="wind"></span> km/h</li>
+          <ul>
+            <li>Humidity: <span id="humidity"></span> %</li>
+            <li>Wind: <span id="wind"></span> km/h</li>
           </ul>
         </div>
 

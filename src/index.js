@@ -61,23 +61,6 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    fahrenheitTemperature
-  );
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-  document.querySelector("#temperature").innerHTML = celsiusTemperature;
-}
-
 //Display Current Date
 let currentTime = new Date();
 document.querySelector("#day").innerHTML = formatDate(currentTime);
@@ -86,18 +69,9 @@ document.querySelector("#day").innerHTML = formatDate(currentTime);
 searchCity("Vinnytsia");
 
 //Submit handling
-let searchForm = document.querySelector(".search-form");
-searchForm.addEventListener("submit", handleSubmit);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 
 //Current city
 let currentCityButton = document.querySelector("#current-city-btn");
 currentCityButton.addEventListener("click", getCurrentLocation);
-
-//Unit Conversion
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
