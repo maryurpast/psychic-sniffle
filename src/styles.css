@@ -3,9 +3,17 @@
   padding: 20px;
   max-width: 600px;
   font-family: "Lato", sans-serif;
-  color: #596275;
-  border: 1px solid #d5d5d8;
-  box-shadow: 1px 1px 10px #d5d5d8;
+  color: #191970;
+  opacity: 0.9;
+  border: 1px solid #cfdfef;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 30px 5px #60a4ea;
+  box-shadow: 0 0 30px 5px #60a4ea;
+  background-image: url(../img/blue-sky-cloud.jpg);
+  background-color: #abcdf1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .search-form {
@@ -43,4 +51,17 @@ li {
   position: relative;
   top: -32px;
   font-size: 40px;
+}
+
+.night-theme {
+  background-image: url(../img/night-sky.jpg);
+  background-color: #1d2b37;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #bababa;
+  border: 1px solid #596275;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 30px 5px #596275;
+  box-shadow: 0 0 30px 5px #596275;
 }

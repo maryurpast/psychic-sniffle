@@ -1,3 +1,10 @@
+function setNightTheme(time) {
+  console.log(time);
+  if (time > 21 || time < 7) {
+    document.querySelector(".my-container").classList.add("night-theme");
+  }
+}
+
 function formatDate(date) {
   let days = [
     "Sunday",
@@ -11,6 +18,8 @@ function formatDate(date) {
   let day = days[date.getDay()];
   let dayNumber = String(date.getDate()).padStart(2, "0");
   let month = String(date.getMonth() + 1).padStart(2, "0");
+
+  setNightTheme(date.getHours());
 
   return `${day} ${dayNumber}.${month}`;
 }
