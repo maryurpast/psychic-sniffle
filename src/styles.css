@@ -1,10 +1,9 @@
 .my-container {
   margin: 50px auto 10px;
   padding: 20px;
-  max-width: 600px;
+  max-width: 750px;
   font-family: "Lato", sans-serif;
   color: #191970;
-  opacity: 0.9;
   border: 1px solid #cfdfef;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 30px 5px #60a4ea;
@@ -21,7 +20,7 @@
 }
 
 .current-temp {
-  margin-bottom: 20px;
+  margin-bottom: -10px;
 }
 
 #day {
@@ -47,7 +46,7 @@ li {
   list-style: none;
 }
 
-.icon {
+#icon {
   position: relative;
   top: -32px;
   font-size: 40px;
@@ -64,4 +63,23 @@ li {
   border-radius: 10px;
   -webkit-box-shadow: 0 0 30px 5px #596275;
   box-shadow: 0 0 30px 5px #596275;
+}
+
+.weather-forecast {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.weather-forecast-day {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.weather-forecast-temperatures {
+  font-size: 14px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
 }
