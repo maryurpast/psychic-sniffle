@@ -1,8 +1,16 @@
 function setNightTheme(time) {
-  console.log(time);
   if (time > 21 || time < 7) {
     document.querySelector(".my-container").classList.add("night-theme");
   }
+}
+
+function diplayLastUpdated(day, dayNumber, month, hours, minutes) {
+  document.querySelector(
+    "#last-updated-data"
+  ).innerHTML = `${day} ${dayNumber}.${month} `;
+  document.querySelector(
+    "#last-updated-time"
+  ).innerHTML = `${hours}:${minutes}`;
 }
 
 function formatDate(date) {
@@ -19,6 +27,9 @@ function formatDate(date) {
   let dayNumber = String(date.getDate()).padStart(2, "0");
   let month = String(date.getMonth() + 1).padStart(2, "0");
 
+  let hours = String(date.getHours()).padStart(2, "0");
+  let minutes = String(date.getMinutes()).padStart(2, "0");
+  diplayLastUpdated(day, dayNumber, month, hours, minutes);
   setNightTheme(date.getHours());
 
   return `${day} ${dayNumber}.${month}`;
@@ -26,9 +37,9 @@ function formatDate(date) {
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
-  console.log(date.getDay());
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[date.getDay()];
+
   return day;
 }
 
@@ -50,7 +61,6 @@ function getCurrentLocation(event) {
 
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  console.log(response.data.daily);
   let forecastHTML = `<div class="row">`;
   let forecast = response.data.daily;
   forecast.forEach(function (forecastDay, index) {
@@ -79,6 +89,7 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
 function getForecast(coordinates) {
   let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
@@ -104,7 +115,6 @@ function displayWeatherCondition(response) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
 
-  console.log(response.data);
   getForecast(response.data.coord);
 }
 
@@ -125,12 +135,12 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+//City Onload
+searchCity("Vinnytsia");
+
 //Display Current Date
 let currentTime = new Date();
 document.querySelector("#day").innerHTML = formatDate(currentTime);
-
-//City Onload + City Search
-searchCity("Vinnytsia");
 
 //Submit handling
 let form = document.querySelector("#search-form");

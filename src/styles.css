@@ -1,3 +1,29 @@
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+#day {
+  font-size: 20px;
+}
+
+#description {
+  margin-bottom: 20px;
+}
+
+#icon {
+  position: relative;
+  top: -30px;
+  left: -22px;
+  font-size: 40px;
+}
+
 .my-container {
   margin: 50px auto 10px;
   padding: 20px;
@@ -23,46 +49,16 @@
   margin-bottom: -10px;
 }
 
-#day {
-  font-size: 20px;
-}
-
 .temp {
   font-size: 62px;
   font-weight: 400;
+  margin-left: -35px;
 }
 
 .units {
   font-size: 24px;
   position: relative;
   top: -32px;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-#icon {
-  position: relative;
-  top: -32px;
-  font-size: 40px;
-}
-
-.night-theme {
-  background-image: url(../img/night-sky.jpg);
-  background-color: #1d2b37;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #bababa;
-  border: 1px solid #596275;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 0 30px 5px #596275;
-  box-shadow: 0 0 30px 5px #596275;
 }
 
 .weather-forecast {
@@ -82,4 +78,24 @@ li {
 
 .weather-forecast-temperature-min {
   opacity: 0.6;
+}
+
+.last-updated,
+.reference {
+  font-size: 16px;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.night-theme {
+  background-image: url(../img/night-sky.jpg);
+  background-color: #1d2b37;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #bababa;
+  border: 1px solid #596275;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 30px 5px #596275;
+  box-shadow: 0 0 30px 5px #596275;
 }
